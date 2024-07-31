@@ -1,0 +1,45 @@
+/* Header.css */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #3498db; /* Update with your preferred background color */
+  color: white;
+}
+
+.logo-and-title-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  margin-right: 20px; /* Add spacing between logo and title */
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  max-height: 100px;
+}
+
+.title-container {
+  margin-bottom: 10px;
+  text-align: center; /* Center the title */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="209.28951mm"
+   height="210.71432mm"
+   viewBox="0 0 209.28951 210.71432"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="KingdomSoftwareLogo.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.044997"
+     inkscape:cx="223.44563"
+     inkscape:cy="278.46971"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1091">
+      <stop
+         style="stop-color:#d5e5ff;stop-opacity:0.1572327;"
+         offset="0.03215434"
+         id="stop1089" />
+      <stop
+         style="stop-color:#000080;stop-opacity:1;"
+         offset="0.58842444"
+         id="stop1087" />
+    </linearGradient>
+    <rect
+       x="-60.287258"
+       y="685.16943"
+       width="1012.4431"
+       height="157.89519"
+       id="rect730" />
+    <rect
+       x="-61.244198"
+       y="707.17908"
+       width="928.23236"
+       height="158.85214"
+       id="rect620" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1091"
+       id="radialGradient1093"
+       cx="226.57396"
+       cy="100.72237"
+       fx="226.57396"
+       fy="100.72237"
+       r="110.68834"
+       gradientTransform="matrix(0.76227136,-0.77203907,0.71077327,0.7017958,-138.24433,257.93697)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-0.32048115,-0.20515544)">
+    <path
+       id="path213"
+       style="fill:url(#radialGradient1093);fill-opacity:1;stroke-width:0.210172"
+       d="m 105.35763,0.20515544 c 0.003,0.0874119 -0.003,0.17455539 -0.004,0.26189411 -3.8e-4,-0.0841385 -0.004,-0.16824615 -0.003,-0.25245279 C 104.78269,23.835164 17.429355,45.528435 17.429355,45.528435 c 0,0 9.912719,56.572415 29.955267,103.545465 H 163.32038 c 20.04567,-46.97451 29.95979,-103.554906 29.95979,-103.554906 0,0 -87.35336,-21.693271 -87.92254,-45.31383856 z M 105.55672,16.93395 c 12.05887,11.623433 33.86292,19.678814 77.96727,34.735039 0,0 -7.66752,45.276694 -23.16367,86.484581 V 98.7931 H 149.9018 v 45.65495 h -8.24597 v -16.09006 h -8.64825 v 16.09006 h -10.86039 v -25.34133 h -3.62015 V 90.949412 h -4.82697 V 84.5133 H 96.80585 v 39.82228 h -8.045244 v 20.11247 h -7.642545 v -6.83839 H 75.888799 V 109.6539 H 50.748606 v 30.61739 C 34.715097,98.514544 26.779959,51.67802 26.779959,51.67802 73.032967,35.478194 92.528363,28.729379 105.55672,16.93395 Z M 63.789127,180.64978 c 11.649775,17.90856 25.510495,30.24516 41.616123,30.2697 v -0.0119 c 16.05916,-0.076 29.88386,-12.39299 41.50775,-30.2578 z" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text618"
+       style="font-size:192px;white-space:pre;shape-inside:url(#rect620);fill:#000080"><tspan
+         x="-61.244141"
+         y="1041.1987"
+         id="tspan3610"><tspan
+           dx="0 7.3906484 2.927093 6.750021 6.6458549 6.645853 6.4739799 10.375031 102.36491 7.291687 6.4739838 3.75 4.2031403 8.6250305 6.4062653 4.5521088"
+           style="font-size:10.6667px"
+           id="tspan3608">Kingdom Software</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.21017207,0,0,0.21017207,12.33436,4.4668782)"
+       id="text728"
+       style="font-size:120px;white-space:pre;shape-inside:url(#rect730);shape-padding:0.956941;fill:#000080"><tspan
+         x="-59.330078"
+         y="795.60659"
+         id="tspan3614"><tspan
+           style="font-family:Rockwell;-inkscape-font-specification:Rockwell;fill:#bceef8"
+           id="tspan3612">Kingdom Software</tspan></tspan></text>
+  </g>
+</svg>

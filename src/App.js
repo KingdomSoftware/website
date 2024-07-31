@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css'; // You can customize the styles in this file
+import Header from './components/Header/Header';
+import WelcomeMessage from './components/WelcomeMessage/WelcomeMessage';
+import MissionVision from './components/MissionVision/MissionVision';
+import CompanyOverview from './components/CompanyOverview/CompanyOverview';
+import SubmitMateSection from './components/SubmitMateSection/SubmitMateSection';
+import ContactUs from './components/ContactUs/ContactUs';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <WelcomeMessage />
+      <CompanyOverview />
+      <MissionVision/>
+      <SubmitMateSection />
+      <ContactUs />
+
+      {/* Footer */}
+      <footer>
+        {/* Add social media links */}
+        <p>&copy; 2023 Kingdom Software. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
