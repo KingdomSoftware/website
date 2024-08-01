@@ -29,38 +29,41 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="contact-us-container">
-      <h2>Contact Us</h2>
-      <p>
-        Have questions or need assistance? Feel free to reach out to us using the form below, and we'll get back to you as soon as possible.
-      </p>
-      <button onClick={openModal}>Open Contact Form</button>
-      <Modal
-        isOpen={isModalOpen}
-        onRequestClose={closeModal}
-        contentLabel="Contact Form Modal"
-        className="modal"
-        overlayClassName="overlay"
-      >
+    <section id="contact">
+      <div className="contact-us-container">
         <h2>Contact Us</h2>
-        <form onSubmit={handleSubmit}>
-          <label>
-            Name:
-            <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
-          </label>
-          <label>
-            Email:
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-          </label>
-          <label>
-            Message:
-            <textarea value={message} onChange={(e) => setMessage(e.target.value)} required />
-          </label>
-          <button type="submit">Submit</button>
-        </form>
-        <button onClick={closeModal}>Close</button>
-      </Modal>
-    </div>
+        <p>
+          Have questions or need assistance? Feel free to reach out to us using the form below, and we'll get back to you as soon as possible.
+        </p>
+        <button onClick={openModal}>Open Contact Form</button>
+        <Modal
+          isOpen={isModalOpen}
+          onRequestClose={closeModal}
+          contentLabel="Contact Form Modal"
+          className="modal"
+          overlayClassName="overlay"
+        >
+          <div className="form-container">
+            <h2>Contact Us <a onClick={closeModal}>X</a></h2>
+            <form onSubmit={handleSubmit}>
+              <label>
+                Name:
+                <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+              </label>
+              <label>
+                Email:
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+              </label>
+              <label>
+                Message:
+                <textarea value={message} onChange={(e) => setMessage(e.target.value)} required />
+              </label>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </Modal>
+      </div>
+    </section>
   );
 };
 

@@ -1,24 +1,24 @@
 // Header.js
 import React from 'react';
 import './Header.css'; // Import the CSS file for styling
+import logo from '../../images/KSLogo.png';
 
 const Header = () => {
-  return (
-    <header className="app-header">
-      <div className="logo-and-title-container">
-        <div className="logo-container">
-          <img src="KingdomSoftwareLogo.svg" alt="Logo" className="logo" />
-        </div>
-        <div className="title-container">
-          <h1>Kingdom Software</h1>
-        </div>
-      </div>
-      <nav className="nav-links">
-        <a href="#submit-mate">SubmitMate</a>
-        {/* Add other navigation links as needed */}
-      </nav>
-    </header>
-  );
+    return (
+        <header>
+            <div className="logo">
+                <img src={logo} alt="Kingdom Software Logo" />
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    );
 };
 
 export default Header;

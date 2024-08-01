@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css'; // You can customize the styles in this file
 import Header from './components/Header/Header';
-import WelcomeMessage from './components/WelcomeMessage/WelcomeMessage';
-import MissionVision from './components/MissionVision/MissionVision';
-import CompanyOverview from './components/CompanyOverview/CompanyOverview';
+import HeroSection from './components/HeroSection/HeroSection';
+import Services from './components/Services/Services';
+//import Testimonials from './components/Testimonials/Testimonials';
+import AboutUs from './components/AboutUs/AboutUs';
+import Footer from './components/Footer/Footer';
 import SubmitMateSection from './components/SubmitMateSection/SubmitMateSection';
 import ContactUs from './components/ContactUs/ContactUs';
 
@@ -11,17 +13,12 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <WelcomeMessage />
-      <CompanyOverview />
-      <MissionVision/>
+      <HeroSection />
+      <Services/>
       <SubmitMateSection />
+      <AboutUs />
       <ContactUs />
-
-      {/* Footer */}
-      <footer>
-        {/* Add social media links */}
-        <p>&copy; 2023 Kingdom Software. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
