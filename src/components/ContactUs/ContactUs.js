@@ -17,7 +17,27 @@ const ContactUs = () => {
     // Add logic to handle form submission (e.g., send data to a server)
 
     // For now, let's just log the form data
+
     console.log('Form submitted:', { name, email, message });
+
+    fetch('https://ury22qirq7.execute-api.ap-southeast-2.amazonaws.com/Prod/send-email',{
+      method:'POST',
+      headers:{
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+          subject:"This is test email from my app",
+          message: "<p>" + name + "</p><p>" + email + "</p><p>" + message + "</p>",
+          fromaddress: "sales@kingdomsoftware.com.au"
+      })
+  })
+  .then(res => res.json())
+  .then(data => {
+      console.log(`Message Sent. MessageId : ${data.SendEmailResponse.SendEmailResult.MessageId}`)
+  })
+  .catch(err => {
+      console.log(err)
+  })
 
     // Reset form fields after submission
     setName('');
