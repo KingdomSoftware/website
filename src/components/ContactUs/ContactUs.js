@@ -26,7 +26,7 @@ const ContactUs = () => {
           'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-          subject:"New contact from " + name,
+          subject: "New contact from " + name,
           message: "<html><body><p>" + name + "</p><p>" + email + "</p><p>" + message + "</p></body></html>",
           fromaddress: "sales@kingdomsoftware.com.au"
       })
