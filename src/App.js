@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import TagManager from 'react-gtm-module';
+import ReactGA from 'react-ga4';
 import './App.css'; // You can customize the styles in this file
 import Header from './components/Header/Header';
 import HeroSection from './components/HeroSection/HeroSection';
@@ -11,12 +11,13 @@ import SubmitMateSection from './components/SubmitMateSection/SubmitMateSection'
 import ContactUs from './components/ContactUs/ContactUs';
 
 function App() {
-  useEffect(() => {
-    const tagManagerArgs = {
-      gtmId: 'G-ZXMYGFTGG9'
-    };
-    TagManager.initialize(tagManagerArgs);
-  }, []);
+  ReactGA.initialize('G-ZXMYGFTGG9');
+
+  ReactGA.send({
+    hitType: "pageview",
+    page: "/",
+    title: "Home Page",
+  });
 
   return (
     <div className="App">
