@@ -39,17 +39,17 @@ const NavMobile = () => {
                       delay: 0.1 + idx / 10,
                     }}
                     key={route.title}
-                    className="w-full p-[0.08rem] rounded-xl bg-gradient-to-tr from-neutral-800 via-neutral-950 to-neutral-700"
+                    className="w-full p-[0.08rem]"
                   >
                     <a
                       onClick={() => setOpen((prev) => !prev)}
                       className={
-                        "flex items-center justify-between w-full p-5 rounded-xl bg-neutral-950"
+                        "flex items-center w-full p-5 rounded-xl bg-cyan-800"
                       }
                       href={route.href}
                     >
-                      <span className="flex gap-1 text-lg">{route.title}</span>
                       <Icon className="text-xl" />
+                      <span className="flex gap-1 text-lg">{route.title}</span>
                     </a>
                   </motion.li>
                 );
