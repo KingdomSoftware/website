@@ -1,5 +1,5 @@
 // Header.js
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css'; // Import the CSS file for styling
 import logo from '../../images/KSLogo.png';
 import { Squash as Hamburger } from "hamburger-react";
@@ -25,8 +25,8 @@ const Header = () => {
                     </div>
             )}
             </div>
-            <nav>
-                <ul className="hidden lg:flex lg:items-center gap-5 text-sm">
+            <nav className="hidden lg:flex lg:items-center gap-5 text-sm">
+                <ul>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#about">About Us</a></li>

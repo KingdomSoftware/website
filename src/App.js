@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactGA from 'react-ga4';
 import './App.css'; // You can customize the styles in this file
-import Header from './components/Header/Header';
+import TopBar from "./components/TopBar/TopBar";
 import HeroSection from './components/HeroSection/HeroSection';
 import Services from './components/Services/Services';
 //import Testimonials from './components/Testimonials/Testimonials';
@@ -21,10 +21,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <TopBar />
       <HeroSection />
       <Services/>
-      <SubmitMateSection />
       <AboutUs />
       <ContactUs />
       <Footer />

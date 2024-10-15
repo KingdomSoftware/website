@@ -64,7 +64,7 @@ const ContactUs = () => {
           overlayClassName="overlay"
         >
           <div className="form-container">
-            <h2>Contact Us <a onClick={closeModal}>X</a></h2>
+            <h2>Contact Us <div onClick={closeModal}>X</div></h2>
             <form onSubmit={handleSubmit}>
               <label>
                 Name:
