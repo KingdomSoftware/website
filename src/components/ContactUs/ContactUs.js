@@ -3,6 +3,14 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiMail, FiUser, FiMessageSquare, FiSend, FiCheckCircle } from 'react-icons/fi';
 
+const escapeHtml = (str) =>
+  str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+
 const ContactUs = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -20,8 +28,8 @@ const ContactUs = () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        subject: "New contact from " + name,
-        message: "<html><body><p>" + name + "</p><p>" + email + "</p><p>" + message + "</p></body></html>",
+        subject: "New contact from " + escapeHtml(name),
+        message: "<html><body><p>" + escapeHtml(name) + "</p><p>" + escapeHtml(email) + "</p><p>" + escapeHtml(message) + "</p></body></html>",
         fromaddress: "sales@kingdomsoftware.com.au"
       })
     })
