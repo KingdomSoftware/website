@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Kingdom Software Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The official website for Kingdom Software — a React 18 single-page application styled with Tailwind CSS, deployed to AWS S3 and served via CloudFront.
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| UI framework | [React 18](https://react.dev/) |
+| Styling | [Tailwind CSS 3](https://tailwindcss.com/) |
+| Animations | [Framer Motion](https://www.framer.motion.com/) |
+| Icons | [React Icons](https://react-icons.github.io/react-icons/) |
+| Analytics | [React GA4](https://github.com/PriceRunner/react-ga4) (Google Analytics 4) |
+| Build tooling | [Create React App](https://create-react-app.dev/) (react-scripts 5) |
+| Container | Docker (Node 18 Alpine) |
+| CI/CD | AWS CodeBuild (`buildspec.yml`) |
+| Hosting | AWS S3 + CloudFront |
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) v18 or later
+- [npm](https://www.npmjs.com/) v8 or later (comes with Node.js)
+- [Docker](https://www.docker.com/) (optional, for containerised development)
+
+## Getting Started
+
+### Local development
+
+```bash
+# Install dependencies
+npm install
+
+# Start the development server
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser. The page hot-reloads on file changes.
+
+### Running with Docker
+
+```bash
+# Build and start the container (maps port 3000)
+docker-compose up --build
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser. The `src/` directory is volume-mounted so changes are reflected without rebuilding the image.
 
 ## Available Scripts
 
-In the project directory, you can run:
+| Command | Description |
+|---|---|
+| `npm start` | Start the development server at `http://localhost:3000` |
+| `npm test` | Run the test suite in interactive watch mode |
+| `npm run build` | Create an optimised production build in the `build/` folder |
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+src/
+├── components/
+│   ├── AboutUs/
+│   ├── ContactUs/
+│   ├── Footer/
+│   ├── Header/
+│   ├── HeroSection/
+│   ├── MissionVision/
+│   ├── NavDesktop/
+│   ├── NavMobile/
+│   ├── Services/
+│   ├── Testimonials/
+│   ├── TopBar/
+│   └── WelcomeMessage/
+├── images/
+├── App.js          # Root component with GA4 initialisation
+├── index.js        # React DOM entry point
+└── routes.js       # Application routes
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Deployment
 
-### `npm test`
+The site is deployed automatically via **AWS CodeBuild** using `buildspec.yml`:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Build** — `npm run build` produces a production bundle in `build/`.
+2. **Sync to S3** — the `build/` directory is synced to the `kingdom-software-website` S3 bucket.
+3. **Cache-bust index** — `index.html` is uploaded with `no-cache` headers to ensure users always receive the latest version.
+4. **CloudFront invalidation** — an invalidation is created on the CloudFront distribution so the new `index.html` is served immediately.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To trigger a deployment, push to the branch that is connected to the CodeBuild project.
