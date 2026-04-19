@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../../images/KingdomSoftwareLogo.png';
 import NavMobile from "../NavMobile/NavMobile";
 import NavDesktop from "../NavDesktop/NavDesktop";
 
@@ -9,7 +10,7 @@ const TopBar = () => {
         <span className="text-lg">
             <img
               className="h-14 w-auto"
-              src={`${process.env.PUBLIC_URL}/KingdomSoftwareLogo.png`}
+              src={logo}
               alt="Kingdom Software Logo"
             />
         </span>
