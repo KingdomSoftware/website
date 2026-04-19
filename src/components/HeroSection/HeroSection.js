@@ -1,17 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import hero from '../../images/KSHero2.png';
+import hero from '../../images/HeroKS.png';
 
 const HeroSection = () => {
     return (
         <section
             className="relative min-h-screen flex items-center justify-center text-white overflow-hidden"
-            style={{ backgroundImage: `url(${hero})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+            style={{ backgroundImage: `url(${hero})`, backgroundSize: 'cover', backgroundPosition: 'left center' }}
         >
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/80" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/55 to-black/75" />
 
-            <div className="relative z-10 container mx-auto text-center max-w-4xl">
+            <div className="relative z-10 container mx-auto w-full px-6">
                 <motion.div
+                    className="max-w-2xl lg:ml-auto text-center lg:text-left"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
@@ -20,13 +21,13 @@ const HeroSection = () => {
                         Kingdom Software
                     </span>
                     <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                        Transforming Ideas into{' '}
+                        Building Secure, Scalable{' '}
                         <span className="text-blue-400">Software Solutions</span>
                     </h1>
-                    <p className="text-lg md:text-xl text-neutral-300 mb-10 max-w-2xl mx-auto">
-                        Innovative, reliable, and scalable technology solutions to drive your business forward.
+                    <p className="text-lg md:text-xl text-neutral-200 mb-10 max-w-2xl mx-auto lg:mx-0">
+                        We design and deliver dependable software that helps your business move faster with confidence.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <a
                             href="#contact"
                             className="px-8 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30"

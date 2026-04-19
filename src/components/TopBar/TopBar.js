@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../../images/KSLogo.png';
 import NavMobile from "../NavMobile/NavMobile";
 import NavDesktop from "../NavDesktop/NavDesktop";
 
@@ -8,7 +7,11 @@ const TopBar = () => {
     <div className="fixed top-0 left-0 right-0 bg-neutral-900 border-b border-neutral-800 z-50">
       <nav className="container flex items-center justify-between py-1 lg:py-4">
         <span className="text-lg">
-            <img className="size-14" src={logo} alt="Kingdom Software Logo" />
+            <img
+              className="h-14 w-auto"
+              src={`${process.env.PUBLIC_URL}/KingdomSoftwareLogo.png`}
+              alt="Kingdom Software Logo"
+            />
         </span>
         <NavMobile />
         <NavDesktop />
