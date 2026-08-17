@@ -7,6 +7,8 @@ import Services from './components/Services/Services';
 import AboutUs from './components/AboutUs/AboutUs';
 import Footer from './components/Footer/Footer';
 import ContactUs from './components/ContactUs/ContactUs';
+import Terms from './components/Terms/Terms';
+import Privacy from './components/Privacy/Privacy';
 
 function App() {
   ReactGA.initialize('G-ZXMYGFTGG9');
@@ -24,6 +26,8 @@ function App() {
       <Services/>
       <AboutUs />
       <ContactUs />
+      <Terms />
+      <Privacy />
       <Footer />
     </div>
   );

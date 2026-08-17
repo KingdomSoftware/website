@@ -21,6 +21,8 @@ const Footer = () => {
                                 { label: 'Services', href: '#services' },
                                 { label: 'About Us', href: '#about' },
                                 { label: 'Contact Us', href: '#contact' },
+                                { label: 'Terms of Service', href: '#terms' },
+                                { label: 'Privacy Policy', href: '#privacy' },
                             ].map(({ label, href }) => (
                                 <li key={label}>
                                     <a href={href} className="text-neutral-500 hover:text-neutral-300 transition-colors">
