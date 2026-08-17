@@ -12,8 +12,8 @@ const values = [
 
 const stats = [
     { value: '2023', label: 'Founded' },
-    { value: '100%', label: 'Client Satisfaction' },
-    { value: '24/7', label: 'Support' },
+    { value: '2', label: 'Products Built' },
+    { value: 'AU', label: 'Based & Operating' },
 ];
 
 const AboutUs = () => {

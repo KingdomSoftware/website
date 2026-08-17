@@ -1,18 +1,82 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import hero from '../../images/HeroKS.png';
 
 const HeroSection = () => {
     return (
-        <section
-            className="relative min-h-screen flex items-center justify-center text-white overflow-hidden"
-            style={{ backgroundImage: `url(${hero})`, backgroundSize: 'cover', backgroundPosition: 'left center' }}
-        >
-            <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/55 to-black/75" />
+        <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden bg-neutral-950">
+            {/* Base gradient wash */}
+            <div className="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-900 to-blue-950" />
+
+            {/* Soft glow blobs */}
+            <div className="absolute -top-24 -right-24 w-[36rem] h-[36rem] bg-blue-600/20 rounded-full blur-3xl" />
+            <div className="absolute top-1/3 -left-32 w-[28rem] h-[28rem] bg-blue-500/10 rounded-full blur-3xl" />
+
+            {/* Blueprint dot-grid texture */}
+            <div
+                className="absolute inset-0 opacity-[0.15]"
+                style={{
+                    backgroundImage: 'radial-gradient(circle, rgba(96,165,250,0.6) 1px, transparent 1px)',
+                    backgroundSize: '28px 28px',
+                }}
+            />
+
+            {/* Network lines accent, upper-right */}
+            <svg
+                className="absolute top-0 right-0 w-[40rem] h-[40rem] opacity-20 pointer-events-none hidden md:block"
+                viewBox="0 0 400 400"
+                fill="none"
+            >
+                <g stroke="#60a5fa" strokeWidth="1">
+                    <line x1="40" y1="60" x2="180" y2="140" />
+                    <line x1="180" y1="140" x2="320" y2="40" />
+                    <line x1="180" y1="140" x2="260" y2="260" />
+                    <line x1="260" y1="260" x2="360" y2="220" />
+                    <line x1="40" y1="60" x2="120" y2="220" />
+                </g>
+                <g fill="#93c5fd">
+                    <circle cx="40" cy="60" r="4" />
+                    <circle cx="180" cy="140" r="5" />
+                    <circle cx="320" cy="40" r="4" />
+                    <circle cx="260" cy="260" r="4" />
+                    <circle cx="360" cy="220" r="3" />
+                    <circle cx="120" cy="220" r="3" />
+                </g>
+            </svg>
+
+            {/* Skyline silhouette along the bottom edge */}
+            <svg
+                className="absolute bottom-0 left-0 w-full h-40 md:h-56 opacity-70 pointer-events-none"
+                viewBox="0 0 1440 220"
+                preserveAspectRatio="none"
+                fill="none"
+            >
+                <g fill="#0a0a0a" fillOpacity="0.9">
+                    <rect x="0" y="140" width="90" height="80" />
+                    <rect x="100" y="100" width="70" height="120" />
+                    <rect x="180" y="150" width="60" height="70" />
+                    <rect x="255" y="60" width="90" height="160" />
+                    <rect x="280" y="30" width="40" height="30" />
+                    <rect x="360" y="120" width="70" height="100" />
+                    <rect x="445" y="90" width="55" height="130" />
+                    <rect x="515" y="150" width="80" height="70" />
+                    <rect x="610" y="40" width="100" height="180" />
+                    <rect x="640" y="10" width="40" height="30" />
+                    <rect x="725" y="110" width="65" height="110" />
+                    <rect x="800" y="70" width="60" height="150" />
+                    <rect x="870" y="140" width="90" height="80" />
+                    <rect x="975" y="95" width="70" height="125" />
+                    <rect x="1060" y="150" width="60" height="70" />
+                    <rect x="1135" y="55" width="90" height="165" />
+                    <rect x="1160" y="25" width="40" height="30" />
+                    <rect x="1235" y="115" width="70" height="105" />
+                    <rect x="1320" y="85" width="55" height="135" />
+                    <rect x="1390" y="145" width="50" height="75" />
+                </g>
+            </svg>
 
             <div className="relative z-10 container mx-auto w-full px-6">
                 <motion.div
-                    className="max-w-2xl lg:ml-auto text-center lg:text-left"
+                    className="max-w-2xl text-center lg:text-left"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
@@ -24,7 +88,7 @@ const HeroSection = () => {
                         Building Secure, Scalable{' '}
                         <span className="text-blue-400">Software Solutions</span>
                     </h1>
-                    <p className="text-lg md:text-xl text-neutral-200 mb-10 max-w-2xl mx-auto lg:mx-0">
+                    <p className="text-lg md:text-xl text-neutral-300 mb-10 max-w-2xl mx-auto lg:mx-0">
                         We design and deliver dependable software that helps your business move faster with confidence.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -45,7 +109,7 @@ const HeroSection = () => {
             </div>
 
             <motion.div
-                className="absolute bottom-8 left-1/2 -translate-x-1/2"
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
                 animate={{ y: [0, 8, 0] }}
                 transition={{ repeat: Infinity, duration: 1.5 }}
             >

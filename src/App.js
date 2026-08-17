@@ -4,6 +4,7 @@ import './App.css';
 import TopBar from "./components/TopBar/TopBar";
 import HeroSection from './components/HeroSection/HeroSection';
 import Services from './components/Services/Services';
+import Portfolio from './components/Portfolio/Portfolio';
 import AboutUs from './components/AboutUs/AboutUs';
 import Footer from './components/Footer/Footer';
 import ContactUs from './components/ContactUs/ContactUs';
@@ -20,10 +21,11 @@ function App() {
   });
 
   return (
-    <div className="App">
+    <div id="top" className="App">
       <TopBar />
       <HeroSection />
       <Services/>
+      <Portfolio />
       <AboutUs />
       <ContactUs />
       <Terms />

@@ -3,23 +3,23 @@
   "name": "Kingdom Software",
   "icons": [
     {
-      "src": "KingdomSoftwareLogo.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "favicon.ico",
+      "sizes": "64x64 48x48 32x32 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "KingdomSoftwareLogo.png",
+      "src": "logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "KingdomSoftwareLogo.png",
+      "src": "logo512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0a"
 }

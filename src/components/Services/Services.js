@@ -25,8 +25,15 @@ const services = [
 
 const Services = () => {
     return (
-        <section id="services" className="py-24 bg-neutral-900">
-            <div className="container mx-auto max-w-6xl">
+        <section id="services" className="relative py-24 bg-neutral-900 overflow-hidden">
+            <div
+                className="absolute inset-0 opacity-[0.06] pointer-events-none"
+                style={{
+                    backgroundImage: 'radial-gradient(circle, rgba(96,165,250,0.8) 1px, transparent 1px)',
+                    backgroundSize: '32px 32px',
+                }}
+            />
+            <div className="container relative mx-auto max-w-6xl">
                 <div className="text-center mb-16">
                     <span className="text-blue-400 font-semibold text-sm uppercase tracking-widest">What We Do</span>
                     <h2 className="text-3xl md:text-4xl font-bold text-white mt-3">Our Services</h2>
