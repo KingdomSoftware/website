@@ -17,11 +17,11 @@ const Privacy = () => {
 
                     <div className="space-y-6 text-neutral-400 leading-relaxed text-sm">
                         <p>
-                            This policy explains how Rafael Casella Medina trading as Kingdom
-                            Software, an Australian sole trader business (&ldquo;Kingdom
-                            Software&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, ABN 73 404 270
-                            785), handles personal information collected through this website
-                            (kingdomsoftware.com.au), consistent with the Australian Privacy
+                            This policy explains how Kingdom Software, an Australian sole trader
+                            business (&ldquo;Kingdom Software&rdquo;, &ldquo;we&rdquo;,
+                            &ldquo;us&rdquo;, ABN 73 404 270 785), handles personal information
+                            collected through this website (kingdomsoftware.com.au), consistent
+                            with the Australian Privacy
                             Principles under the Privacy Act 1988 (Cth).
                         </p>
 

@@ -18,10 +18,10 @@ const Terms = () => {
                     <div className="space-y-6 text-neutral-400 leading-relaxed text-sm">
                         <p>
                             These Terms of Service govern your use of this website
-                            (kingdomsoftware.com.au), operated by Rafael Casella Medina trading as
-                            Kingdom Software, an Australian sole trader business (&ldquo;Kingdom
-                            Software&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, ABN 73 404 270
-                            785). By using this website you agree to these Terms.
+                            (kingdomsoftware.com.au), operated by Kingdom Software, an Australian
+                            sole trader business (&ldquo;Kingdom Software&rdquo;, &ldquo;we&rdquo;,
+                            &ldquo;us&rdquo;, ABN 73 404 270 785). By using this website you agree
+                            to these Terms.
                         </p>
 
                         <div>
