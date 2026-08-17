@@ -10,8 +10,8 @@ const products = [
         tagline: 'Competitions & promotions campaign builder',
         description:
             'A campaign builder for competitions, giveaways, and promotions — from entry forms and submission handling through to reporting and analytics.',
-        href: 'https://submitmate.com',
-        cta: 'Visit submitmate.com',
+        href: 'https://submitmate.com.au',
+        cta: 'Visit submitmate.com.au',
         colorClass: 'bg-blue-500/10 text-blue-400 border-blue-500/20 group-hover:bg-blue-500/20',
     },
     {
