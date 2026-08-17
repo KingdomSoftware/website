@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import markOutline from '../../images/brand/mark.svg';
+import markOutline from '../../images/brand/mark-outline.svg';
 
 const nodes = [
     { cx: 60, cy: 90, r: 5 },
@@ -37,11 +37,11 @@ const HeroSection = () => {
                 }}
             />
 
-            {/* Giant watermark shield */}
+            {/* Giant watermark of the brand mark */}
             <img
                 src={markOutline}
                 alt=""
-                className="absolute -right-24 top-1/2 -translate-y-1/2 w-[46rem] h-auto opacity-[0.07] hidden lg:block pointer-events-none"
+                className="absolute -right-16 top-1/2 -translate-y-1/2 w-[34rem] h-auto opacity-[0.12] hidden lg:block pointer-events-none"
             />
 
             {/* Network graph accent */}
