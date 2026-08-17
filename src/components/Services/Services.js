@@ -25,7 +25,7 @@ const services = [
 
 const Services = () => {
     return (
-        <section id="services" className="relative py-24 bg-neutral-900 overflow-hidden">
+        <section id="services" className="relative py-24 bg-neutral-900">
             <div
                 className="absolute inset-0 opacity-[0.06] pointer-events-none"
                 style={{
@@ -51,12 +51,12 @@ const Services = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: i * 0.1 }}
                                 viewport={{ once: true }}
-                                className="group bg-neutral-800 border border-neutral-700 rounded-2xl p-8 hover:border-neutral-500 transition-all duration-300 hover:shadow-xl hover:shadow-black/20"
+                                className="group bg-neutral-800 border border-neutral-700 rounded-2xl p-8 hover:border-blue-500/40 hover:-translate-y-1 transition-all duration-300 hover:shadow-xl hover:shadow-blue-950/40"
                             >
                                 <div className={`inline-flex p-3 rounded-xl border ${service.colorClass} transition-colors duration-300 mb-5`}>
                                     <Icon className="w-6 h-6" />
                                 </div>
-                                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                                <h3 className="font-display text-xl font-semibold text-white mb-3">{service.title}</h3>
                                 <p className="text-neutral-400 leading-relaxed">{service.description}</p>
                             </motion.div>
                         );

@@ -53,12 +53,12 @@ const Portfolio = () => {
                                     {...(product.href
                                         ? { href: product.href, target: '_blank', rel: 'noopener noreferrer' }
                                         : {})}
-                                    className="group block h-full bg-neutral-800 border border-neutral-700 rounded-2xl p-8 hover:border-neutral-500 transition-all duration-300 hover:shadow-xl hover:shadow-black/20"
+                                    className="group block h-full bg-neutral-800 border border-neutral-700 rounded-2xl p-8 hover:border-blue-500/40 hover:-translate-y-1 transition-all duration-300 hover:shadow-xl hover:shadow-blue-950/40"
                                 >
                                     <div className={`inline-flex p-3 rounded-xl border ${product.colorClass} transition-colors duration-300 mb-5`}>
                                         <Icon className="w-6 h-6" />
                                     </div>
-                                    <h3 className="text-xl font-semibold text-white mb-1">{product.name}</h3>
+                                    <h3 className="font-display text-xl font-semibold text-white mb-1">{product.name}</h3>
                                     <p className="text-blue-400 text-sm font-medium mb-3">{product.tagline}</p>
                                     <p className="text-neutral-400 leading-relaxed mb-5">{product.description}</p>
                                     <span className="inline-flex items-center gap-1.5 text-sm font-medium text-neutral-300 group-hover:text-blue-400 transition-colors">

@@ -3,6 +3,9 @@ export default {
     content: ["./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
       extend: {
+        fontFamily: {
+          display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        },
         container: {
           center: true,
           padding: "1.25rem",

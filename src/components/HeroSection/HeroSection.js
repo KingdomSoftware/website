@@ -1,5 +1,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import markOutline from '../../images/brand/mark.svg';
+
+const nodes = [
+    { cx: 60, cy: 90, r: 5 },
+    { cx: 230, cy: 170, r: 6 },
+    { cx: 400, cy: 60, r: 5 },
+    { cx: 330, cy: 300, r: 5 },
+    { cx: 470, cy: 260, r: 4 },
+    { cx: 150, cy: 280, r: 4 },
+    { cx: 500, cy: 420, r: 5 },
+    { cx: 260, cy: 440, r: 4 },
+];
+
+const edges = [
+    [0, 1], [1, 2], [1, 3], [3, 4], [0, 5], [3, 6], [3, 7],
+];
 
 const HeroSection = () => {
     return (
@@ -8,8 +24,9 @@ const HeroSection = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-900 to-blue-950" />
 
             {/* Soft glow blobs */}
-            <div className="absolute -top-24 -right-24 w-[36rem] h-[36rem] bg-blue-600/20 rounded-full blur-3xl" />
+            <div className="absolute -top-24 -right-24 w-[36rem] h-[36rem] bg-blue-600/25 rounded-full blur-3xl" />
             <div className="absolute top-1/3 -left-32 w-[28rem] h-[28rem] bg-blue-500/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-1/4 w-[24rem] h-[24rem] bg-indigo-500/10 rounded-full blur-3xl" />
 
             {/* Blueprint dot-grid texture */}
             <div
@@ -20,37 +37,49 @@ const HeroSection = () => {
                 }}
             />
 
-            {/* Network lines accent, upper-right */}
+            {/* Giant watermark shield */}
+            <img
+                src={markOutline}
+                alt=""
+                className="absolute -right-24 top-1/2 -translate-y-1/2 w-[46rem] h-auto opacity-[0.07] hidden lg:block pointer-events-none"
+            />
+
+            {/* Network graph accent */}
             <svg
-                className="absolute top-0 right-0 w-[40rem] h-[40rem] opacity-20 pointer-events-none hidden md:block"
-                viewBox="0 0 400 400"
+                className="absolute top-0 right-0 w-full max-w-3xl h-full opacity-40 pointer-events-none hidden md:block"
+                viewBox="0 0 560 500"
                 fill="none"
+                preserveAspectRatio="xMaxYMid slice"
             >
-                <g stroke="#60a5fa" strokeWidth="1">
-                    <line x1="40" y1="60" x2="180" y2="140" />
-                    <line x1="180" y1="140" x2="320" y2="40" />
-                    <line x1="180" y1="140" x2="260" y2="260" />
-                    <line x1="260" y1="260" x2="360" y2="220" />
-                    <line x1="40" y1="60" x2="120" y2="220" />
+                <g stroke="#60a5fa" strokeWidth="1" strokeOpacity="0.5">
+                    {edges.map(([a, b], i) => {
+                        const A = nodes[a];
+                        const B = nodes[b];
+                        return <line key={i} x1={A.cx} y1={A.cy} x2={B.cx} y2={B.cy} />;
+                    })}
                 </g>
                 <g fill="#93c5fd">
-                    <circle cx="40" cy="60" r="4" />
-                    <circle cx="180" cy="140" r="5" />
-                    <circle cx="320" cy="40" r="4" />
-                    <circle cx="260" cy="260" r="4" />
-                    <circle cx="360" cy="220" r="3" />
-                    <circle cx="120" cy="220" r="3" />
+                    {nodes.map((n, i) => (
+                        <motion.circle
+                            key={i}
+                            cx={n.cx}
+                            cy={n.cy}
+                            r={n.r}
+                            animate={{ opacity: [0.5, 1, 0.5] }}
+                            transition={{ duration: 3, repeat: Infinity, delay: i * 0.3 }}
+                        />
+                    ))}
                 </g>
             </svg>
 
             {/* Skyline silhouette along the bottom edge */}
             <svg
-                className="absolute bottom-0 left-0 w-full h-40 md:h-56 opacity-70 pointer-events-none"
+                className="absolute bottom-0 left-0 w-full h-40 md:h-56 pointer-events-none"
                 viewBox="0 0 1440 220"
                 preserveAspectRatio="none"
                 fill="none"
             >
-                <g fill="#0a0a0a" fillOpacity="0.9">
+                <g fill="#1e3a8a" fillOpacity="0.35">
                     <rect x="0" y="140" width="90" height="80" />
                     <rect x="100" y="100" width="70" height="120" />
                     <rect x="180" y="150" width="60" height="70" />
@@ -72,6 +101,7 @@ const HeroSection = () => {
                     <rect x="1320" y="85" width="55" height="135" />
                     <rect x="1390" y="145" width="50" height="75" />
                 </g>
+                <rect x="0" y="217" width="1440" height="3" fill="#3b82f6" fillOpacity="0.4" />
             </svg>
 
             <div className="relative z-10 container mx-auto w-full px-6">
@@ -84,7 +114,7 @@ const HeroSection = () => {
                     <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium bg-blue-600/30 border border-blue-400/40 rounded-full text-blue-300 tracking-wide">
                         Kingdom Software
                     </span>
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    <h1 className="font-display text-4xl md:text-6xl font-bold mb-6 leading-tight">
                         Building Secure, Scalable{' '}
                         <span className="text-blue-400">Software Solutions</span>
                     </h1>

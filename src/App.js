@@ -3,6 +3,7 @@ import ReactGA from 'react-ga4';
 import './App.css';
 import TopBar from "./components/TopBar/TopBar";
 import HeroSection from './components/HeroSection/HeroSection';
+import TechStack from './components/TechStack/TechStack';
 import Services from './components/Services/Services';
 import Portfolio from './components/Portfolio/Portfolio';
 import AboutUs from './components/AboutUs/AboutUs';
@@ -24,6 +25,7 @@ function App() {
     <div id="top" className="App">
       <TopBar />
       <HeroSection />
+      <TechStack />
       <Services/>
       <Portfolio />
       <AboutUs />

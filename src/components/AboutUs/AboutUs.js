@@ -66,11 +66,14 @@ const AboutUs = () => {
                                 To be a beacon of transparency and correctness in the software industry — setting the standard for excellence and inspiring confidence in our clients and partners worldwide.
                             </p>
                         </div>
-                        <div className="grid grid-cols-3 gap-4">
-                            {stats.map((stat) => (
-                                <div key={stat.label} className="bg-neutral-800 border border-neutral-700 rounded-xl p-5 text-center">
-                                    <p className="text-2xl font-bold text-blue-400">{stat.value}</p>
-                                    <p className="text-neutral-500 text-sm mt-1">{stat.label}</p>
+                        <div className="grid grid-cols-3 gap-4 bg-gradient-to-br from-blue-950/40 to-neutral-800 border border-neutral-700 rounded-2xl p-6">
+                            {stats.map((stat, i) => (
+                                <div
+                                    key={stat.label}
+                                    className={`text-center ${i > 0 ? 'border-l border-neutral-700' : ''}`}
+                                >
+                                    <p className="font-display text-3xl font-bold text-blue-400">{stat.value}</p>
+                                    <p className="text-neutral-500 text-xs mt-1 uppercase tracking-wide">{stat.label}</p>
                                 </div>
                             ))}
                         </div>

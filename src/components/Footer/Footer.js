@@ -11,7 +11,7 @@ const Footer = () => {
                     <div className="md:col-span-2">
                         <div className="flex items-center gap-2.5 mb-4">
                             <img src={mark} alt="" className="h-9 w-auto" />
-                            <span className="text-white font-semibold tracking-wide">Kingdom Software</span>
+                            <span className="text-white font-display font-semibold tracking-wide">Kingdom Software</span>
                         </div>
                         <p className="text-neutral-500 text-sm leading-relaxed max-w-sm">
                             Delivering innovative and reliable software solutions with transparency and excellence since 2023.

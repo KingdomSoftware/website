@@ -9,7 +9,7 @@ const TopBar = () => {
       <nav className="container flex items-center justify-between py-1 lg:py-4">
         <a href="#top" className="flex items-center gap-2.5">
           <img className="h-9 w-auto" src={mark} alt="" />
-          <span className="text-white font-semibold tracking-wide text-base">
+          <span className="text-white font-display font-semibold tracking-wide text-base">
             Kingdom Software
           </span>
         </a>
